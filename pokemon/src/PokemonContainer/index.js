@@ -32,7 +32,11 @@ class PokemonContainer extends Component{
   }
   seeSingleMon = (iOfPokemon) => {
     this.setState({
-      pokemons: this.state.pokemons.results.filter((pokemon, i) => i == parseInt(iOfPokemon)),
+      pokemons: this.state.pokemons.filter((pokemon, i) => {
+        if(i == parseInt(iOfPokemon)){
+          return this.pokemons.props[i]
+        }
+      }),
     });
   }
   render() {
