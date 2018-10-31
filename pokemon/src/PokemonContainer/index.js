@@ -20,6 +20,7 @@ class PokemonContainer extends Component{
         return e
       } 
   }
+  //Maybe I should try to get a single pokemon?
   componentDidMount(){
     this.getPokemons().then((pokemons) => {
       this.setState({
